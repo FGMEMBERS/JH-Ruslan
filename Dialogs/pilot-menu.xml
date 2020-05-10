@@ -11,7 +11,7 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-						var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Aircraft/Ruslan-JSB/Dialogs/autopilot9.xml");
+						var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", "Dialogs/autopilot11.xml");
 						autopilot.open();
 					</script>
 				</binding>

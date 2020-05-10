@@ -58,7 +58,7 @@
 		<vtailarea unit="M2"> 125.61 </vtailarea>
 		<vtailarm  unit="M" >  31.034 </vtailarm>
 		<location name="AERORP" unit="M">
-			<x>   1.00 </x>
+			<x>   2.00 </x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>

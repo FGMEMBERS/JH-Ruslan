@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- 
+
+	This is an ANtonov An-124 based on the 3D model from Adino Gonthaler who used it with Yasim.
+	
+
+	2018 Refurbish for the JWocky Hangar:
+	Many systems had been broken over time, FG demanded additional properties, the AP went on other planes on never versions.
+
+	License : GPL 2.0
+ -->
+
 <PropertyList>
 
 	<sim>
 
-		<description>Antonov An-124 Ruslan with JSB</description>
+		<description>Antonov An-124 Ruslan Freighter</description>
 		<author>Peter Brendt (JWocky) - FDM, Autopilot, Systems</author>
 		<author>Andino Gonthaeler - Model taken from the A-124 under Yasim</author>
 
-		<minimum-fg-version>2017.3.1</minimum-fg-version>
+		<aircraft-version>V03.00.00</aircraft-version>
+		<minimum-fg-version>2018.2.1</minimum-fg-version>
+		<status>pre-beta</status>
 
-		<aircraft-version>V02.02.00</aircraft-version>
 		<aircraft-variant>
 			<aircraft-type type="string">freighter</aircraft-type>
-			<aircraft-subtype type="string">Ruslan-T</aircraft-subtype>
+			<aircraft-subtype type="string">RuslanF</aircraft-subtype>
 		</aircraft-variant>
-		<status>Development</status>
+		<tanker type="bool">false</tanker>
 
 		<rating>
 			<FDM type="int">0</FDM>
@@ -25,35 +37,31 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-		<aero>Aero/Ruslan-F</aero>
+		<aero>Aero/RuslanF_aero</aero>
 
 		<!-- Splash Screens -->
 		<startup>
-			<splash-texture>Aircraft/Ruslan-JSB/Splashes/splash1.jpg</splash-texture>
-			<!-- splash-texture>Aircraft/Ruslan-JSB/Splashes/splash2.jpg</splash-texture -->
-			<!-- splash-texture>Aircraft/Ruslan-JSB/Splashes/splash3.jpg</splash-texture -->
+			<splash-texture>Splashes/splash1.jpg</splash-texture>
 		</startup>
 
 		<!-- Settings for Model -->
 		<model>
 
 			<!-- path to model file -->
-			<path>Aircraft/Ruslan-JSB/Models/Ruslan-F.xml</path>
+			<path>Models/Ruslan-F.xml</path>
+
+			<livery>
+				<file type="string">Antonov</file>
+			</livery> 
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
 				<kp type="double">4000</kp>
-				<ki type="double">0</ki>
+				<ki type="double">150</ki>
 				<kd type="double">0</kd>
 				<position-norm type="double">0</position-norm>
 				<enabled type="bool">false</enabled>
 			</pushback>
-
-			<!-- String variable to hold current livery -->
-			<livery>
-				<file type="string">436th</file>
-				<!-- texture>436th.png</texture -->
-			</livery> 
 
 		</model>
 
@@ -61,7 +69,7 @@
 
 		<!-- basic startup settings for sim -->
 		<freeze>
-			<fuel>false</fuel>	<!-- false is default -->
+			<fuel>false</fuel>	<!-- false is default, only here for quick changes for testing -->
 		</freeze>
 
 		<gui>
@@ -74,10 +82,30 @@
 			</dialogs>
 		</gui>
 
+		<chase-distance-m>-100</chase-distance-m>
+
+		<sound>
+			<path>Sounds/Ruslan_sound.xml</path>
+			<ovolume type="float">1.0</ovolume>
+			<ivolume type="float">1.0</ivolume>
+		</sound>
+
+		<autostart>
+			<started>0</started>
+		</autostart>
+
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+
+		<instrumentation>
+			<path>Systems/instrumentation.xml</path>
+		</instrumentation>
+
+		<!-- Multiplay section if exists -->
+
 		<!-- HUD section -->
 		<hud>
 			<enable3d>false</enable3d>
-			<path n="1">Aircraft/Ruslan-JSB/Voodoomaster/Systems/HUD/hud.xml</path>
+			<path n="1">Systems/HUD/hud.xml</path>
 			<visibility n="1">false</visibility>
 			<palette>
 				<color n="0">
@@ -149,6 +177,46 @@
 					<green type="float">0.1</green>
 					<blue type="float">1.0</blue>
 				</color>
+	
+				<color n="7">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">0.2</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="8">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.0</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.2</blue>
+				</color>
+	
+				<color n="9">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">0.2</red>
+					<green type="float">0.0</green>
+					<blue type="float">0.0</blue>
+				</color>
+	
+				<color n="10">
+					<alpha type="float">1.00</alpha>
+					<antialiased type="bool">false</antialiased>
+					<brightness type="float">1.00</brightness>
+					<transparent type="bool">false</transparent>
+					<red type="float">1.0</red>
+					<green type="float">1.0</green>
+					<blue type="float">0.0</blue>
+				</color>
 
 			</palette>
  
@@ -160,65 +228,21 @@
 			</clipping>
 		</hud>
 		  
-		<!-- Blackout rendering due to G-forces -->
-		<!-- rendering>
+		<!-- Blackout rendering due to G-forces, relative tolerant -->
+		<rendering>
 			<redout>
+				<enabled type="bool">true</enabled>
 				<parameters>
-					<blackout-complete-g>9.1</blackout-complete-g>
-					<blackout-onset-g>7.5</blackout-onset-g>
+					<blackout-complete-g type="double">9.1</blackout-complete-g>
+					<blackout-onset-g type="double">7.5</blackout-onset-g>
+					<redout-complete-g type="double">-6.5</redout-complete-g>
+					<redout-onset-g type="double">-4</redout-onset-g>
 				</parameters>
 			</redout>
-		</rendering -->
-
-		<virtual-cockpit archive="y">true</virtual-cockpit>
-
-		<sound>
-			<path>Aircraft/Ruslan-JSB/Sounds/Ruslan.xml</path>
-			<ovolume type="float">1.0</ovolume>
-			<ivolume type="float">1.0</ivolume>
-		</sound>
-
-		<autostart>
-			<started>0</started>
-		</autostart>
-
-		<flaps>
-			<setting>0.000</setting> <!-- 0 deg up -->
-			<setting>0.200</setting> <!-- 8 deg maneuvering -->
-			<setting>0.400</setting> <!-- 16 deg intermediate I -->
-			<setting>0.625</setting> <!-- 25 deg intermediate II -->
-			<setting>0.800</setting> <!-- 32 deg take off -->
-			<setting>1.000</setting> <!-- 40 deg landing -->
-		</flaps>
-
-		<systems>
-
-			<electrical>
-				<path>Aircraft/Generic/generic-electrical.xml</path>
-			</electrical>
-
-			<autopilot>
-				<path>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Autopilot/SYS10_1_autopilot.xml</path>
-			</autopilot>
-
-			<!-- path>Aircraft/Ruslan-JSB/Systems/Systems.xml</path -->
-			<!-- autopilot>
-				<path>Aircraft/Ruslan-JSB/Systems/An-124-autopilot.xml</path>
-			</autopilot>
-			<property-rule n="100">
-			        <path>Aircraft/Ruslan-JSB/Systems/An-124-autospoiler.xml</path>
-			</property-rule -->    
-		</systems>
-
-		<instrumentation>
-			<path>Aircraft/Ruslan-JSB/Systems/instrumentation.xml</path>
-		</instrumentation>
-
-		<!-- Multiplay section if exists -->
-
-		<tanker type="bool">false</tanker>
-
-		<chase-distance-m type="double" archive="y">-100.0</chase-distance-m>
+			<camera-group>
+				<znear type="double">0.1</znear>
+			</camera-group>
+		</rendering>
 
 		<view n="0">
 			<name>Pilot</name>
@@ -418,19 +442,104 @@
 			</runways>
 		</airport>
 
+		<help include="Dialogs/pilot-help.xml"/>
+
+		<menubar include="Dialogs/pilot-menu.xml"/>
+
 		<!--  
 			<checklists include="Ruslan-checklists.xml"/>
 		* -->
 
-		<menubar include="Dialogs/pilot-menu.xml"/>
+		<systems>
 
-		<help include="Dialogs/pilot-help.xml"/>
+			<electrical>
+				<path>Aircraft/Generic/generic-electrical.xml</path>
+			</electrical>
+
+			<autopilot>
+				<path>Systems/Autopilot/SYS11_0_autopilot.xml</path>
+			</autopilot>
+
+			<!-- path>Aircraft/Ruslan-JSB/Systems/Systems.xml</path -->
+			<!-- property-rule n="100">
+			        <path>Aircraft/Ruslan-JSB/Systems/An-124-autospoiler.xml</path>
+			</property-rule -->    
+		</systems>
+
+		<alarms>
+			<master-caution type="bool">false</master-caution>
+		</alarms>
+
+		<flaps>
+			<setting>0.000</setting> <!-- 0 deg up -->
+			<setting>0.200</setting> <!-- 8 deg maneuvering -->
+			<setting>0.400</setting> <!-- 16 deg intermediate I -->
+			<setting>0.625</setting> <!-- 25 deg intermediate II -->
+			<setting>0.800</setting> <!-- 32 deg take off -->
+			<setting>1.000</setting> <!-- 40 deg landing -->
+		</flaps>
 
 	</sim>
 
-	<input include="Dialogs/pilot-keyboard.xml"/>
+	<fdm>
+		<jsbsim>
+			<!-- fcs>
+				<flap-setting type="int">0</flap-setting>
+			</fcs -->
+			<systems>
+				<pushback>
+					<linked type="int">0</linked>
+				</pushback>
+				<justone type="int">1</justone>
+			</systems>
+		</jsbsim>
+	</fdm>
+	
+	<engines>
+		<engine-set type="string">DT18T</engine-set>
+		<engine n="0">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>     
+		<engine n="1">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine> 
+		<engine n="2">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+		<engine n="3">
+			<reverser type="bool">false</reverser>
+			<reverser-position type="double">0.000000</reverser-position>
+		</engine>
+	</engines>
 
-	<!-- fuel tanks and other consumables -->
+	<gear>
+
+		<gear n="0">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+
+		<gear n="1">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+
+		<gear n="2">
+			<tyre-smoke type="int">0</tyre-smoke>
+			<sprayspeed-ms type="double">0</sprayspeed-ms>
+			<spray-density type="double">0</spray-density>
+			<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+		</gear>
+	
+	</gear>
+
 	<consumables>
 		<fuel>
 			<!--
@@ -603,8 +712,6 @@
 		</fuel>
 	</consumables>
 
-	<!-- Payload section: Whatever weights -->
-
 	<payload>
 		<weight n="0">
 			<name>Pilot</name>
@@ -672,26 +779,6 @@
 
 	</payload>
 	
-	<engines>
-		<engine-set type="string">DT18T</engine-set>
-		<engine n="0">
-			<reverser type="bool">false</reverser>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine>     
-		<engine n="1">
-			<reverser type="bool">false</reverser>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine> 
-		<engine n="2">
-			<reverser type="bool">false</reverser>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine>
-		<engine n="3">
-			<reverser type="bool">false</reverser>
-			<reverser-position type="double">0.000000</reverser-position>
-		</engine>
-	</engines>
-	
 	<controls>
 	
 		<engines>
@@ -738,7 +825,9 @@
 
 	</controls>
 
-	<!-- FDM section if exists -->
+	<!-- #### ai submodels if exist -->
+
+	<input include="Dialogs/pilot-keyboard.xml"/>
 	
 	<limits>
 		<vne>402</vne>
@@ -779,32 +868,42 @@
     
 	<!-- Autopilot initialization -->
 	<autopilot>
-
 		<settings>
+			<ap-armed type="bool">false</ap-armed>
 			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float"> 8.0</max-pitch>
-			<min-pitch type="float">-6.0</min-pitch>
-			<bank-angle-limit-deg type="int">65</bank-angle-limit-deg>
-			<max-vs type="float"> 3000.0</max-vs>
-			<min-vs type="float">-3000.0</min-vs>
+			<max-pitch type="float">9.9</max-pitch>
+			<min-pitch type="float">-9.9</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+			<propgain-roll type="float">-4.0</propgain-roll>
+			<altitude-unit type="string">ft</altitude-unit>
+			<buffered-altitude-m type="int">0</buffered-altitude-m>
+			<buffered-altitude-ft type="int">0</buffered-altitude-ft>
+			<target-altitude-m type="int">0</target-altitude-m>
+			<target-altitude-ft type="int">0</target-altitude-ft>
+                        <yawdamper type="bool">false</yawdamper>
 		</settings>
-
 		<internal>
+			<ap-active type="bool">false</ap-active>
 			<target-pitch-deg type="float">0.00</target-pitch-deg>
 			<max-pitch type="float"> 8.0</max-pitch>
 			<min-pitch type="float">-6.0</min-pitch>
-			<max-vs type="float"> 3000.0</max-vs>
-			<min-vs type="float">-3000.0</min-vs>
+			<min-alt-ft type="int">1000</min-alt-ft>
+			<min-alt-m type="int">305</min-alt-m>
 		</internal>
-
+                <locks>
+                       <heading type="string"></heading>
+                       <altitude type="string"></altitude>
+                </locks>
 	</autopilot>
   
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
+
 		<dialogs>
 			<fuel-and-payload type="string">Antonov An-124 Weight and Fuel</fuel-and-payload>
 			<system-settings type="string">Antonov An-124 System Settings</system-settings>
 		</dialogs>
+
 		<internal>
 			<message-header type="string">...</message-header>
 			<message-switcher type="string">...</message-switcher>
@@ -849,10 +948,12 @@
 			<msg_engine7_stop type="string">Engine 4 shutting down!</msg_engine7_stop>
 
 		</internal>
+
 		<systems>
 			<electrical>
 				<number-apus type="int">2</number-apus>
 			</electrical>
+
 			<engines>
 				<number type="int">8</number>
 				<set>
@@ -864,11 +965,15 @@
 					<number type="int">4</number>
 				</set>
 			</engines>
+
 			<fuel>
 				<number-pumps type="int">2</number-pumps>
 			</fuel>
+
 		</systems>
+
 		<settings>
+
 			<setting>
 				<name type="string">Engines</name>
 				<current type="int">0</current>
@@ -885,6 +990,7 @@
 					</opt>
 				</options>
 			</setting>
+
 			<setting>
 				<name type="string">Cockpit</name>
 				<current type="int">1</current>
@@ -906,8 +1012,11 @@
 					</opt>
 				</options>
 			</setting>
+
 		</settings>
+
 		<pilots>
+
 			<setting>
 				<name type="string">Nosewheel Steering</name>
 				<current type="int">1</current>
@@ -926,14 +1035,18 @@
 					</opt>
 				</options>
 			</setting>
+
 		</pilots>
+
 		<steering>
 			<steering-type type="string">TriCycle</steering-type>	<!-- Alternativ: Taildragger-lock or TriCycle -->
 			<steering-wheel type="int">0</steering-wheel>
 		</steering>
+
 		<pushback>
 			<activated type="bool">false</activated>
 		</pushback>
+
 		<ground-service>
 			<fuel-truck>
 				<truck n="0">
@@ -980,12 +1093,15 @@
 				</truck>
 			</fuel-truck>
 		</ground-service>
+
 		<weather>
 			<relative-wind type="float">0.00</relative-wind>
 		</weather>
+
 		<hud>
 			<mode type="int">0</mode>
 		</hud>
+
 		<route>
 			<marker n="0" type="string"></marker>
 			<number n="0" type="int"></number>
@@ -1064,11 +1180,13 @@
 			<bearing n="10" type="float"></bearing>
 			<distance n="10" type="float"></distance>
 		</route>
+
 		<engines>
 			<fuel_flow_total_pps type="double">0.00</fuel_flow_total_pps>
 			<airtime type="double">0.00</airtime>
 			<range_nm type="double">0.00</range_nm>
 		</engines>
+
 	</voodoomaster>
 
 	<!-- instrumentation>
@@ -1124,21 +1242,10 @@
 
 	</instrumentation -->
 
-	<fdm>
-		<jsbsim>
-			<!-- fcs>
-				<flap-setting type="int">0</flap-setting>
-			</fcs -->
-			<systems>
-				<!-- pushback>
-					<linked type="int">0</linked>
-				</pushback -->
-				<justone type="int">1</justone>
-			</systems>
-		</jsbsim>
-	</fdm>
-
 	<nasal>
+		<shared>
+			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
+		</shared>
 		<an-124>
 			<file>Aircraft/Ruslan-JSB/Systems/MainControl.nas</file>
 			<file>Aircraft/Ruslan-JSB/Systems/Reverse-Thrust.nas</file>
