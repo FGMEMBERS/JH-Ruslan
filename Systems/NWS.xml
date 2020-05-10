@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<system name="NWS">
+
+	<property>systems/NWS/engaged</property>
+
+	<channel name="Nose Wheel Steering">
+
+		<scheduled_gain name="systems/NWS/steer-deg0">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      9.0
+					1     45.0
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[0]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg1">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      9.0
+					1     45.0
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[1]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg2">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[2]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg3">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[3]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg4">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[4]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg5">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[5]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg6">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[6]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg7">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[7]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg8">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[8]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg9">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[9]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg10">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[10]</output>
+		</scheduled_gain>
+
+		<scheduled_gain name="systems/NWS/steer-deg11">
+			<input>fcs/steer-cmd-norm</input>
+			<table>
+				<independentVar lookup="row">systems/NWS/engaged</independentVar>
+				<tableData>
+					0      0.0
+					1    -22.5
+				</tableData>
+			</table>
+			<output>fcs/steer-pos-deg[11]</output>
+		</scheduled_gain>
+
+	</channel>
+
+</system>

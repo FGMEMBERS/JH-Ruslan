@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<sim>
+		<model>
+			<livery>
+				<name type="string">XMAS2017</name>
+				<texture>/../Models/Liveries/xmas2017.png</texture>
+			</livery>
+		</model>
+	</sim>
+
+</PropertyList>

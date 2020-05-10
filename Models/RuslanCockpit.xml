@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Aircraft/Ruslan-JSB/Models/Cockpit/Cockpit.ac</path>
+
+
+	<!-- Movimiento general con la puerta delantera-->
+
+	<animation>
+		<type>rotate</type>
+		<property>sim/model/door-positions/front/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.50</dep>
+			</entry>
+			<entry>
+				<ind>0.75</ind>
+				<dep>0.40</dep>
+			</entry>
+			<entry>
+				<ind>0.25</ind>
+				<dep>0.20</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<type>material</type>
+		<object-name>cockpitshell_0_1_1</object-name>
+		<object-name>CP-Bulkheads</object-name>
+		<emission>
+			<factor-prop>controls/lighting/instruments-norm</factor-prop>
+			<red>   0.25 </red>
+			<green> 0.25 </green>
+			<blue>  0.25 </blue>
+		</emission>
+	</animation>
+
+
+	<model>
+		<name>glareshield</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/glareshield.xml</path>
+		<offsets> 
+			<x-m>-20.80</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  3.185</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>forward</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/forward.xml</path>
+		<offsets> 
+			<x-m>-20.80</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  3.185</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>pedestal</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/pedestal.xml</path>
+		<offsets> 
+			<x-m>-20.80</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  3.185</z-m>
+		</offsets>
+	</model>
+
+
+	<model>
+		<name>seats</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/seats.xml</path>
+		<offsets> 
+			<x-m>-20.80</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  3.185</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>yokes</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/yokes.xml</path>
+		<offsets> 
+			<x-m>-20.80</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  3.185</z-m>
+		</offsets>
+		<condition>
+			<not>
+				<property>sim/model/hide-yoke</property>
+			</not>
+		</condition>
+	</model>
+
+	<model>
+		<name>seats</name>
+		<path>Aircraft/Ruslan-JSB/Models/Cockpit/overhead.xml</path>
+		<offsets> 
+			<x-m>-19.7</x-m>
+			<y-m>  0.0 </y-m>
+			<z-m>  4.3</z-m>
+		</offsets>
+	</model>
+
+</PropertyList>
+

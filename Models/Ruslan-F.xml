@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<model>
+		<name>An-124 Generic</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanOutside.xml</path>
+		<livery>
+			<file type="string">Antonov</file>
+		</livery>
+	</model>
+
+	<model>
+		<name>Cockpit</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanCockpit.xml</path>
+		<offsets>
+			<x-m>0.4</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+			<pitch-deg>1</pitch-deg>
+		</offsets>
+		<condition>
+			<equals>
+				<property>sim/current-view/internal</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+	</model>
+
+	<model>
+		<name>An-124 Operations</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanOperations.xml</path>
+	</model>
+
+	<model>
+		<name>An-124 Lighs</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanLights.xml</path>
+	</model>
+
+
+	<model>
+		<name>An-124 Interior</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanInterior.xml</path>
+	</model>
+
+	<model>
+		<name>An-124 Operations</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanCargo.xml</path>
+	</model>
+
+</PropertyList>
+

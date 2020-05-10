@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<!-- Livery System for MP -->
+	<nasal>
+		<load>
+			var rplayer = cmdarg();
+			# Set up property aliases for animations.
+			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
+
+			var livery_update = aircraft.livery_update.new("Aircraft/Ruslan-JSB/Models/Liveries", 10);
+
+			setprop("voodoomaster/refuel[0]/device", "RefuelBoom");
+			setprop("voodoomaster/refuel[0]/boom-angle", 0.0);
+			setprop("voodoomaster/refuel[0]/boom-extend", 0.0);
+
+			setprop("voodoomaster/refuel[1]/device", "RefuelProbe");
+			setprop("voodoomaster/refuel[1]/probe-extended", 0);
+
+			setprop("voodoomaster/refuel[2]/device", "RefuelProbe");
+			setprop("voodoomaster/refuel[2]/probe-extended", 0);
+
+			setprop("voodoomaster/refuel[3]/device", "RefuelProbe");
+			setprop("voodoomaster/refuel[3]/probe-extended", 0);
+
+		</load>
+
+		<unload>
+			livery_update.stop();
+		</unload>
+	</nasal>
+
+	<model>
+		<name>An-124 Generic</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanOutside.xml</path>
+		<livery>
+			<file type="string">Antonov</file>
+		</livery>
+	</model>
+
+	<model>
+		<name>Cockpit</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanCockpit.xml</path>
+		<offsets>
+			<x-m>0.4</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+			<pitch-deg>1</pitch-deg>
+		</offsets>
+		<condition>
+			<equals>
+				<property>sim/current-view/internal</property>
+				<value type="bool">true</value>
+			</equals>
+		</condition>
+	</model>
+
+	<model>
+		<name>An-124 Operations</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanOperations.xml</path>
+	</model>
+
+	<model>
+		<name>An-124 Lighs</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanLights.xml</path>
+	</model>
+
+
+	<model>
+		<name>An-124 Interior</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanInterior.xml</path>
+	</model>
+
+	<model>
+		<name>An-124 Operations</name>
+		<path>Aircraft/Ruslan-JSB/Models/RuslanCargo.xml</path>
+	</model>
+  
+	<!-- Boom -->
+	<model>
+		<path>Aircraft/Ruslan-JSB/Models/Refuel/Boom.xml</path>
+		<offsets>
+			<x-m>  2.9500 </x-m>
+			<y-m>  0.00000 </y-m>
+			<z-m>  -2.0000 </z-m>
+		</offsets>
+	</model>
+  
+	<!-- Probe left -->
+	<model>
+		<path>Aircraft/Ruslan-JSB/Models/Refuel/Probe.xml</path>
+		<offsets>
+			<x-m> 4.2 </x-m>
+			<y-m>  -12.10000 </y-m>
+			<z-m> 0.5500 </z-m>
+		</offsets>
+	</model>
+  
+	<!-- Probe center -->
+	<model>
+		<path>Aircraft/Ruslan-JSB/Models/Refuel/Probe.xml</path>
+		<offsets>
+			<x-m> 8.5000 </x-m>
+			<y-m>  19.90000 </y-m>
+			<z-m>  -3.15 </z-m>
+		</offsets>
+	</model>
+  
+	<!-- Probe right -->
+	<model>
+		<path>Aircraft/Ruslan-JSB/Models/Refuel/Probe.xml</path>
+		<offsets>
+			<x-m> 4.2 </x-m>
+			<y-m> 52.80000 </y-m>
+			<z-m> 0.5500 </z-m>
+		</offsets>
+	</model>
+
+</PropertyList>
+

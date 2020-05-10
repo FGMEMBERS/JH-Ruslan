@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+	<title>Antonov An-124</title>
+	<line>______________________________________________</line>
+
+	<key>
+		<name>h/H</name>
+		<desc>HUD colors</desc>
+	</key>
+
+	<key>
+		<name>m/M</name>
+		<desc>HUD  modes</desc>
+	</key>
+
+	<key>
+		<name>s/S</name>
+		<desc>Speedbrakes</desc>
+	</key>
+
+	<key>
+		<name>Delete</name>
+		<desc>Reverser on/off</desc>
+	</key>
+
+<text>
+    Wellcome to Ruslan the Antonov An-124 !
+
+    General characteristics
+
+    Crew: 4-6 (pilot, copilot, navigator, senior flight engineer (+flight engineer, radio man) + 2 loadmasters)
+    Capacity: 88 passengers or the hold can take an additional 350 on a palletised seating system
+    Payload: 150,000 kg (330,000 lb)
+    Length: 68.96 m (226 ft 3 in)
+    Wingspan: 73.3 m (240 ft 5 in)
+    Height: 20.78 m (68 ft 2 in)
+    Wing area: 628 m2 (6,760 sq ft)
+    Empty weight: 175,000 kg (385,000 lb)
+    Loaded weight: 405,000 kg (893,000 lb)
+    Useful load: 230,000 kg (508,000 lb)
+    Max. takeoff weight: 405,000 kg (893,000 lb)
+    Powerplant: 4 x Progress D-18T turbofans, 229.5 kN (51,600 lbf) each
+
+    Performance
+
+        Depending on choden engine set
+
+    Cargo and Range:
+
+        Depending on chosen engine set
+
+</text>
+   
+</PropertyList>
