@@ -1247,8 +1247,8 @@
 			<file>Systems/Autopilot/SYS11_0_compatibility.nas</file>
 		</shared>
 		<an-124>
-			<file>Aircraft/Ruslan-JSB/Systems/MainControl.nas</file>
-			<file>Aircraft/Ruslan-JSB/Systems/Reverse-Thrust.nas</file>
+			<file>Systems/MainControl.nas</file>
+			<file>Systems/Reverse-Thrust.nas</file>
 			<!-- file>Aircraft/An-124/Nasal/Electrical.nas</file>
 			<file>Aircraft/An-124/Nasal/systems.nas</file>
 			<file>Aircraft/An-124/Nasal/tyresmoke.nas</file>
@@ -1259,10 +1259,10 @@
 			<file>Aircraft/Generic/limits.nas</file -->
 		</an-124>
 		<voodoomaster>
-			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
-			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Autostart/Autostart.nas</file>
-			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Settings/Settings.nas</file>
-			<file>Aircraft/Ruslan-JSB/Voodoomaster/Systems/Pilots/Pilots.nas</file>
+			<file>Voodoomaster/Systems/FuelPayload/Fuel-And-Payload.nas</file>
+			<file>Voodoomaster/Systems/Autostart/Autostart.nas</file>
+			<file>Voodoomaster/Systems/Settings/Settings.nas</file>
+			<file>Voodoomaster/Systems/Pilots/Pilots.nas</file>
 		</voodoomaster>
 		<!--dialogs>
 			<file>Aircraft/An-124/Nasal/dialogs.nas</file>

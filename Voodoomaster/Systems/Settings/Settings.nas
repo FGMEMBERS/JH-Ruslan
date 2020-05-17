@@ -13,14 +13,13 @@ var SettingsDialog = {
 	srow: -1,
 	scol: -1,
 
-	new: func(width=340,height=160) {
+	new: func(width=440,height=160) {
 		var m = {
 			parents: [SettingsDialog],
-			_dlg: canvas.Window.new([width, height], "myTitle")
+			_dlg: canvas.Window.new([width, height], "dialog")
 		};
 
-		m._dlg.getCanvas(1)
-		.set("background", canvas.style.getColor("bg_color"));
+		m._dlg.getCanvas(1).set("background", canvas.style.getColor("bg_color"));
 		m._root = m._dlg.getCanvas().createGroup();
  
 		var vbox = canvas.VBoxLayout.new();

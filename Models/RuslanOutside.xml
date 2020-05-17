@@ -8,6 +8,21 @@ An-124 Ruslan model configuration file
 
 <PropertyList>
 
+	<nasal>
+		<!-- Liveries and other model-related mp functions -->
+
+	        <load>
+			var livery_update = aircraft.livery_update.new("Aircraft/Ruslan-JSB/Models/Liveries", 10);
+	       	</load>
+	
+		<unload>
+			livery_update.stop();
+		</unload>
+	
+		</nasal>
+
+	<!-- Livery Selection Animation -->
+
 	<path>Ruslan.ac</path>
 	<offsets>
 		<z-m>0.0</z-m>
@@ -79,20 +94,6 @@ An-124 Ruslan model configuration file
 			<blue>  0.1 </blue>
 		</emission>
 	</animation>
-
-	<!-- Liveries-->
-
-	<!-- nasal>
-	        <load>
-			var livery_update = aircraft.livery_update.new("Aircraft/Ruslan-JSB/Models/Liveries", 10);
-        	</load>
-
-		<unload>
-			livery_update.stop();
-		</unload>
-	</nasal -->
-
-	<!-- Livery Selection Animation -->
 
 	<animation>
 		<type>material</type>

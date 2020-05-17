@@ -15,7 +15,7 @@
 	<!--
 		File:     Ruslan-DT18T.xml
 		Inputs:
-			name:          Ruslan-DT18T
+			name:          Ruslan-DT18T/GP7000
 			type:          four-engine transonic transport (freighter)
 			manufacturer:  Antonov
 			first flight:  December 1982
@@ -40,9 +40,9 @@
 			CD-0:          0.017
 			K:             0.042
 		General Characteristics:
-			Crew: 4-8 typical (pilot, 1st Officer, one or two flight engineers, navigator, radio, one or two loadmasters), 3 minimum (pilot, copilot, flight-engineer)
+			Crew: 4-8 typical (pilot, 1st Officer, one or two flight engineers, navigator, radio, one or two loadmasters), 				3 minimum (pilot, copilot, flight-engineer)
 			Payload: 330,000 lbs (150,000 kg)
-			Engines : Ivchenko-Progress D-18T (sometimes referred as DT18-T) with 51,670 lbs thrust, modernized version with GP7000 with 81,500 lbs in discussion 
+			Engines : Ivchenko-Progress D-18T (sometimes referred as DT18-T) with 51,670 lbs thrust, modernized version 				with GP7000 with 81,500 lbs in discussion 
 			Fuel Capacity:		76,414 gallons
 			Fuel Tanks:		10 integral tanks in wings
 			Normal Cruise Speed: 	Mach 0.78
@@ -58,7 +58,7 @@
 		<vtailarea unit="M2"> 125.61 </vtailarea>
 		<vtailarm  unit="M" >  31.034 </vtailarm>
 		<location name="AERORP" unit="M">
-			<x>   2.00 </x>
+			<x>   4.00 </x>
 			<y>   0.00 </y>
 			<z>   0.00 </z>
 		</location>
@@ -80,7 +80,7 @@
 		<izz unit="KG*M2"> 48870406.4866679 </izz>
 		<emptywt unit="KG" > 175029.9558 </emptywt>
 		<location name="CG" unit="M">
-			<x>  1.50 </x>
+			<x>  12.00 </x>
 			<y>  0.00 </y>
 			<z>  0.00 </z>
 		</location>
@@ -88,7 +88,7 @@
 		<pointmass name="Pilot"> 
 			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
-				<x>30.9843 </x>		<!-- just estimations from sketches -->
+				<x>-30.9843 </x>		<!-- just estimations from sketches -->
 				<y>-1.8000 </y>
 				<z>-2.5000 </z>
 			</location> 
@@ -97,7 +97,7 @@
 		<pointmass name="First Officer"> 
 			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
-				<x>30.9843 </x>
+				<x>-30.9843 </x>
 				<y> 1.8000 </y>
 				<z>-2.5000 </z> 
 			</location> 
@@ -106,7 +106,7 @@
 		<pointmass name="Navigator"> 
 			<weight unit="LBS"> 180.00 </weight> 
 			<location name="POINTMASS" unit="M"> 
-				<x>28.98 </x>
+				<x>-28.98 </x>
 				<y>-1.6000 </y>
 				<z>-2.5000 </z> 
 			</location> 
@@ -115,8 +115,8 @@
 		<pointmass name="Radio"> 
 			<weight unit="LBS"> 180.00 </weight>  
 			<location name="POINTMASS" unit="M"> 
-				<x>26.9843 </x>	<!-- both on the right side, so middle between their seats -->
-				<y>-1.6000 </y>
+				<x>-26.9843 </x>	<!-- both on the right side, so middle between their seats -->
+				<y> 1.6000 </y>
 				<z>-2.5000 </z> 
 			</location> 
 		</pointmass>
@@ -124,7 +124,7 @@
 		<pointmass name="Engineers"> 
 			<weight unit="LBS"> 180.00 </weight>
 			<location name="POINTMASS" unit="M"> 
-				<x>28.2343 </x>	<!-- both on the right side, so middle between their seats -->
+				<x>-28.2343 </x>	<!-- both on the right side, so middle between their seats -->
 				<y> 1.6000 </y>
 				<z>-2.5000 </z> 
 			</location> 
@@ -133,7 +133,7 @@
 		<pointmass name="Loadmasters"> 
 			<weight unit="LBS"> 180.00 </weight>  
 			<location name="POINTMASS" unit="M"> 
-				<x>22.4843 </x>	<!-- actually, one sits left, one sits right, so the equal each other out -->
+				<x>-22.4843 </x>	<!-- actually, one sits left, one sits right, so the equal each other out -->
 				<y>    0.00 </y>
 				<z>  154.75 </z> 
 			</location> 
@@ -488,7 +488,7 @@
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine1 -->
 			<location unit="M">
-				<x>   6.3951 </x>
+				<x>   -6.3951 </x>
 				<y> -17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
@@ -500,7 +500,7 @@
 			<feed>0</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>   4.3951 </x>
+					<x>   -4.3951 </x>
 					<y> -17.6897 </y>
 					<z>  -1.0000 </z>
 				</location>
@@ -514,7 +514,7 @@
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine2 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y> -10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -526,7 +526,7 @@
 			<feed>1</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  0.4940 </x>
+					<x>  -0.4940 </x>
 					<y> -10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -540,7 +540,7 @@
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine3 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y>  10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -552,7 +552,7 @@
 			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  0.4940 </x>
+					<x>  -0.4940 </x>
 					<y>  10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -566,8 +566,8 @@
 
 		<engine file="Ivchenko_DT18T"> <!-- Engine4 -->
 			<location unit="M">
-				<x>   8.3951 </x>
-				<y>  17.6897 </y>
+				<x>  -6.3951 </x>
+				<y> 17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
 			<orient unit="DEG"> 
@@ -578,7 +578,7 @@
 			<feed>3</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  4.3951 </x>
+					<x>  -4.3951 </x>
 					<y>  17.6897 </y>
 					<z>  -1.0000 </z>
 				</location>
@@ -592,7 +592,7 @@
 
 		<engine file="Alliance_GP7277"> <!-- Engine1 -->
 			<location unit="M">
-				<x>   6.3951 </x>
+				<x>  -6.3951 </x>
 				<y> -17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
@@ -604,7 +604,7 @@
 			<feed>0</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>   4.3951 </x>
+					<x>  -4.3951 </x>
 					<y> -17.6897 </y>
 					<z>  -1.0000 </z>
 				</location>
@@ -618,7 +618,7 @@
 
 		<engine file="Alliance_GP7277"> <!-- Engine2 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y> -10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -630,7 +630,7 @@
 			<feed>1</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  2.4940 </x>
+					<x>  -0.4940 </x>
 					<y> -10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -644,7 +644,7 @@
 
 		<engine file="Alliance_GP7277"> <!-- Engine3 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y>  10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -656,7 +656,7 @@
 			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  2.4940 </x>
+					<x>  -0.4940 </x>
 					<y>  10.4939 </y>
 					<z>  -1.0000</z>
 				</location>
@@ -670,8 +670,8 @@
 
 		<engine file="Alliance_GP7277"> <!-- Engine4 -->
 			<location unit="M">
-				<x>   6.3951 </x>
-				<y>  17.6897 </y>
+				<x> -6.3951 </x>
+				<y> 17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
 			<orient unit="DEG"> 
@@ -682,7 +682,7 @@
 			<feed>3</feed>
 			<thruster file="direct">
 				<location unit="M">
-					<x>  4.3951 </x>
+					<x>  -4.3951 </x>
 					<y>  17.6897 </y>
 					<z>  -1.0000 </z>
 				</location>
@@ -696,7 +696,7 @@
 
 		<tank type="FUEL" number="0"> <!-- Feeder 1 -->
 			<location unit="M">
-				<x>   6.3951 </x>
+				<x>  -6.3951 </x>
 				<y> -17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
@@ -708,7 +708,7 @@
 
 		<tank type="FUEL" number="1"> <!-- Feeder 2 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y> -10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -720,7 +720,7 @@
 
 		<tank type="FUEL" number="2"> <!-- Feeder 3 -->
 			<location unit="M">
-				<x>  4.4940 </x>
+				<x>  -4.4940 </x>
 				<y>  10.4939 </y>
 				<z>  -1.0000</z>
 			</location>
@@ -732,7 +732,7 @@
 
 		<tank type="FUEL" number="3"> <!-- Feeder 4 -->
 			<location unit="M">
-				<x>   6.3951 </x>
+				<x>   -6.3951 </x>
 				<y>  17.6897 </y>
 				<z>  -1.0000 </z>
 			</location>
@@ -744,7 +744,7 @@
 
 		<tank type="FUEL" number="4"> <!-- Left5 -->
 			<location unit="M">
-				<x>   3.00 </x>
+				<x>  -3.00 </x>
 				<y> -27.09 </y>
 				<z>   2.13 </z>
 			</location>
@@ -756,7 +756,7 @@
 
 		<tank type="FUEL" number="5"> <!-- Left4 -->
 			<location unit="M">
-				<x>   2.00 </x>
+				<x>  -2.00 </x>
 				<y> -20.14 </y>
 				<z>   2.78 </z>
 			</location>
@@ -768,7 +768,7 @@
 
 		<tank type="FUEL" number="6"> <!-- Left3 -->
 			<location unit="M">
-				<x>   1.00 </x>
+				<x>  -1.00 </x>
 				<y> -15.53 </y>
 				<z>   3.35 </z>
 			</location>
@@ -792,7 +792,7 @@
 
 		<tank type="FUEL" number="8"> <!-- Left1 -->
 			<location unit="M">
-				<x>  -1.00 </x>
+				<x>  1.00 </x>
 				<y>  -7.11 </y>
 				<z>   4.00 </z>
 			</location>
@@ -804,7 +804,7 @@
 
 		<tank type="FUEL" number="9"> <!-- Right1 -->
 			<location unit="M">
-				<x>  -1.00 </x>
+				<x>  1.00 </x>
 				<y>   7.11 </y>
 				<z>   4.00 </z>
 			</location>
@@ -828,7 +828,7 @@
 
 		<tank type="FUEL" number="11"> <!-- Right3 -->
 			<location unit="M">
-				<x>   1.00 </x>
+				<x>   -1.00 </x>
 				<y>  15.53 </y>
 				<z>   3.35 </z>
 			</location>
@@ -840,7 +840,7 @@
 
 		<tank type="FUEL" number="12"> <!-- Right4 -->
 			<location unit="M">
-				<x>   2.00 </x>
+				<x>   -2.00 </x>
 				<y>  20.14 </y>
 				<z>   2.78 </z>
 			</location>
@@ -852,7 +852,7 @@
 
 		<tank type="FUEL" number="13"> <!-- Right5 -->
 			<location unit="M">
-				<x>   3.00 </x>
+				<x>   -3.00 </x>
 				<y>  27.09 </y>
 				<z>   2.13 </z>
 			</location>

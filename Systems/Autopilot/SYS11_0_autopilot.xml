@@ -44,7 +44,7 @@
 		<name>predicted nav1-error 5 seconds ahead</name>
 		<input>/autopilot/internal/nav1-track-error-deg</input>
 		<output>/autopilot/internal/nav1-error-5-sec-ahead</output>
-		<seconds>12</seconds>
+		<seconds>3</seconds>
 		<filter-gain>1.00</filter-gain>
 	</predict-simple>
 
@@ -123,14 +123,14 @@
 		<max-rate-of-change>40.0</max-rate-of-change>
 	</filter>
 
-	<filter>
+	<!--filter>
 		<name>Nav1 heading error Filter</name>
 		<debug>false</debug>
 		<type>noise-spike</type>
 		<input>/autopilot/internal/nav1-error-5-sec-ahead</input>
 		<output>/autopilot/internal/nav1-heading-error-deg-filtered</output>
-		<max-rate-of-change>30.0</max-rate-of-change>
-	</filter>
+		<max-rate-of-change>10.0</max-rate-of-change>
+	</filter -->
     
 	<!-- vertical speed hold transmitter -->
 	<pid-controller>
@@ -708,7 +708,7 @@
 					<value>nav1-hold</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/internal/nav1-heading-error-deg-filtered</prop>
+			<prop>/autopilot/internal/nav1-track-error-deg</prop>
 		</input>
 		<reference>
 			<condition>

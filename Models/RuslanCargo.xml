@@ -6,7 +6,7 @@
 
 	<model>
 		<name>Locomotive</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Locomotive/ICE-firstcar.xml</path>
+		<path>Models/Cargo/Locomotive/ICE-firstcar.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/locomotive</property>
@@ -35,7 +35,7 @@
 
 	<model>
 		<name>Container</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container.xml</path>
+		<path>Models/Cargo/Containers/container.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container</property>
@@ -62,7 +62,7 @@
 
 	<model>
 		<name>Container2</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container2.xml</path>
+		<path>Models/Cargo/Containers/container2.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container2</property>
@@ -89,7 +89,7 @@
 
 	<model>
 		<name>Container3</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container3.xml</path>
+		<path>Models/Cargo/Containers/container3.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container3</property>
@@ -116,7 +116,7 @@
 
 	<model>
 		<name>Container4</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container4.xml</path>
+		<path>Models/Cargo/Containers/container4.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container4</property>
@@ -143,7 +143,7 @@
 
 	<model>
 		<name>Container5</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container5.xml</path>
+		<path>Models/Cargo/Containers/container5.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container5</property>
@@ -170,7 +170,7 @@
 
 	<model>
 		<name>Container6</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Containers/container6.xml</path>
+		<path>Models/Cargo/Containers/container6.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/container6</property>
@@ -199,7 +199,7 @@
 
 	<model>
 	<name>Helicopter</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Helicopter/helicopter.xml</path>
+		<path>Models/Cargo/Helicopter/helicopter.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/helicopter</property>
@@ -226,7 +226,7 @@
 
 	<model>
 		<name>Helicopter2</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Helicopter/helicopter2.xml</path>
+		<path>Models/Cargo/Helicopter/helicopter2.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/helicopter2</property>
@@ -253,7 +253,7 @@
 
 	<model>
 		<name>Helicopter3</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Helicopter/helicopter3.xml</path>
+		<path>Models/Cargo/Helicopter/helicopter3.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/helicopter3</property>
@@ -280,7 +280,7 @@
 
 	<model>
 		<name>Helicopter4</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cargo/Helicopter/helicopter4.xml</path>
+		<path>Models/Cargo/Helicopter/helicopter4.xml</path>
 		<condition>
 			<and>
 				<property>controls/switches/helicopter4</property>

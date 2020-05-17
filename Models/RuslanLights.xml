@@ -7,7 +7,7 @@
 	<!--landing-->
 	
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/landinglight.xml</path>
+		<path>Models/Lights/landinglight.xml</path>
 		<name>RightLandinglight</name>
 		<condition>
 		<equals>
@@ -23,7 +23,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/landinglight.xml</path>
+		<path>Models/Lights/landinglight.xml</path>
 		<name>LeftLandinglight</name>
 		<condition>
 		<equals>
@@ -39,7 +39,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/landinglight.xml</path>
+		<path>Models/Lights/landinglight.xml</path>
 		<name>RightwingLandinglight</name>
 		<condition>
 		<equals>
@@ -55,7 +55,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/landinglight.xml</path>
+		<path>Models/Lights/landinglight.xml</path>
 		<name>LeftwingLandinglight</name>
 		<condition>
 		<equals>
@@ -71,7 +71,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/RedLight.xml</path>
+		<path>Models/Lights/RedLight.xml</path>
 		<name>Redlight</name>     
 		<offsets>
 			<x-m>13.73</x-m>
@@ -81,7 +81,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/GreenLight.xml</path>
+		<path>Models/Lights/GreenLight.xml</path>
 		<name>Greenlight</name>     
 		<offsets>
 			<x-m>13.73</x-m>
@@ -93,7 +93,7 @@
 	<!--beacon-->
 
 	<model>
-		<path>Aircraft/Ruslan-JSB/Models/Lights/beacon.xml</path>
+		<path>Models/Lights/beacon.xml</path>
 		<name>Beacon</name>     
 		<offsets>
 			<x-m>-4.30</x-m>

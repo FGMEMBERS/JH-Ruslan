@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>Aircraft/Ruslan-JSB/Models/Cockpit/Cockpit.ac</path>
+	<path>Models/Cockpit/Cockpit.ac</path>
 
 
 	<!-- Movimiento general con la puerta delantera-->
@@ -56,7 +56,7 @@
 
 	<model>
 		<name>glareshield</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/glareshield.xml</path>
+		<path>Models/Cockpit/glareshield.xml</path>
 		<offsets> 
 			<x-m>-20.80</x-m>
 			<y-m>  0.0 </y-m>
@@ -66,7 +66,7 @@
 
 	<model>
 		<name>forward</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/forward.xml</path>
+		<path>Models/Cockpit/forward.xml</path>
 		<offsets> 
 			<x-m>-20.80</x-m>
 			<y-m>  0.0 </y-m>
@@ -76,7 +76,7 @@
 
 	<model>
 		<name>pedestal</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/pedestal.xml</path>
+		<path>Models/Cockpit/pedestal.xml</path>
 		<offsets> 
 			<x-m>-20.80</x-m>
 			<y-m>  0.0 </y-m>
@@ -87,7 +87,7 @@
 
 	<model>
 		<name>seats</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/seats.xml</path>
+		<path>Models/Cockpit/seats.xml</path>
 		<offsets> 
 			<x-m>-20.80</x-m>
 			<y-m>  0.0 </y-m>
@@ -97,7 +97,7 @@
 
 	<model>
 		<name>yokes</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/yokes.xml</path>
+		<path>Models/Cockpit/yokes.xml</path>
 		<offsets> 
 			<x-m>-20.80</x-m>
 			<y-m>  0.0 </y-m>
@@ -112,7 +112,7 @@
 
 	<model>
 		<name>seats</name>
-		<path>Aircraft/Ruslan-JSB/Models/Cockpit/overhead.xml</path>
+		<path>Models/Cockpit/overhead.xml</path>
 		<offsets> 
 			<x-m>-19.7</x-m>
 			<y-m>  0.0 </y-m>

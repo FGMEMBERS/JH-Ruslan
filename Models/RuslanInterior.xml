@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>Aircraft/Ruslan-JSB/Models/Interior/interior.ac</path>
+	<path>Models/Interior/interior.ac</path>
 
 	<animation>
 		<type>rotate</type>
