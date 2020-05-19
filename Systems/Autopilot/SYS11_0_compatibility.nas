@@ -329,9 +329,36 @@ var AP_Toggle = func () {
 	return(result);
 }
 
+
+####################################################################
+#                                                                  #
+# helpers for the AP since <expressions> are broken                #
+#                                                                  #
+####################################################################
+
+var target_turn_comp=func() {
+	var flaps= getprop("/controls/flight/flaps");
+	var turnMin= getprop("/autopilot/settings/turn_gain_min");
+	var turnMax=getprop("/autopilot/settings/turn_gain_max");
+	var turnCurr=1.00;
+	var machSpeed=getprop("/velocities/mach");
+	if (flaps>0.01) {
+		turnCurr=turnMin;
+	} else {
+		if (machSpeed<0.5) {
+			turnCurr=(turnMax-turnMin)*machSpeed+turnMin;
+		} else {
+			turnCurr=turnMax;
+		}
+	}	
+	setprop("/autopilot/internal/turn_gain", turnCurr);
+	settimer (target_turn_comp, 1);
+}
+
 initialize();
 #### put all the settimers and setlisteners to the end, makes it easier to find ####
 settimer (ALT_min, 5);
+settimer (target_turn_comp, 1);
 #### those call conversion functions on top of the file
 var listener_target_alt_ft = setlistener("autopilot/settings/target-altitude-ft", sync_units_ft, 0, 0);
 var listener_target_alt_m = setlistener("autopilot/settings/target-altitude-m", sync_units_m, 0, 0);

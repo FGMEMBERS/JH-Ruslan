@@ -871,8 +871,8 @@
 		<settings>
 			<ap-armed type="bool">false</ap-armed>
 			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float">9.9</max-pitch>
-			<min-pitch type="float">-9.9</min-pitch>
+			<max-pitch type="float">8</max-pitch>
+			<min-pitch type="float">-6</min-pitch>
 			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
 			<propgain-roll type="float">-4.0</propgain-roll>
 			<altitude-unit type="string">ft</altitude-unit>
@@ -881,6 +881,8 @@
 			<target-altitude-m type="int">0</target-altitude-m>
 			<target-altitude-ft type="int">0</target-altitude-ft>
                         <yawdamper type="bool">false</yawdamper>
+			<turn_gain_max type="double">-4.00</turn_gain_max>
+			<turn_gain_min type="double">-0.50</turn_gain_min>
 		</settings>
 		<internal>
 			<ap-active type="bool">false</ap-active>
