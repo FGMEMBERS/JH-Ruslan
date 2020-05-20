@@ -5,6 +5,18 @@
 	<path>Models/Interior/interior.ac</path>
 
 	<animation>
+	  <type>select</type>
+	  <object-name>InteriorFuselageL</object-name>
+	  <object-name>InteriorFuselageR</object-name>
+	  <condition>
+	    <equals>
+	      <property>sim/current-view/name</property>
+	      <value>Cargo Bay View</value>
+	    </equals>
+	  </condition>
+	</animation>
+	
+	<animation>
 		<type>rotate</type>
 		<condition>
 			<less-than-equals>

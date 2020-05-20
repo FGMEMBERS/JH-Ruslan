@@ -28,7 +28,7 @@ An-124 Ruslan model configuration file
 		<z-m>0.0</z-m>
 		<pitch-deg>0</pitch-deg>
 	</offsets>
-
+	
 	<!-- door motions????-->
 
 	<animation>
