@@ -29,8 +29,8 @@
 
 		<!-- Splash Screens -->
 		<startup>
-			<splash-texture>Aircraft/Ruslan-JSB/Splashes/splash1.jpg</splash-texture>
-			<splash-texture>Aircraft/Ruslan-JSB/Splashes/splash2.jpg</splash-texture>
+			<splash-texture>Aircraft/Ruslan-JSB/Splashes/splash1.png</splash-texture>
+			<splash-texture>Aircraft/Ruslan-JSB/Splashes/splash2.png</splash-texture>
 		</startup>
 
 		<!-- Settings for Model -->

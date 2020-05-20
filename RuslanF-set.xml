@@ -41,7 +41,7 @@
 
 		<!-- Splash Screens -->
 		<startup>
-			<splash-texture>Splashes/splash1.jpg</splash-texture>
+			<splash-texture>Splashes/splash1.png</splash-texture>
 		</startup>
 
 		<!-- Settings for Model -->
