@@ -23,7 +23,7 @@ An-124 Ruslan model configuration file
 
 	<!-- Livery Selection Animation -->
 
-	<path>Ruslan.ac</path>
+	<path>Aircraft/JH-Ruslan/Models/Ruslan.ac</path>
 	<offsets>
 		<z-m>0.0</z-m>
 		<pitch-deg>0</pitch-deg>

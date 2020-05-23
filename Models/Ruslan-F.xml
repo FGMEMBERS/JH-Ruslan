@@ -4,7 +4,7 @@
 
 	<model>
 		<name>An-124 Generic</name>
-		<path>Models/RuslanOutside.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanOutside.xml</path>
 		<livery>
 			<file type="string">Antonov</file>
 		</livery>
@@ -12,7 +12,7 @@
 
 	<model>
 		<name>Cockpit</name>
-		<path>Models/RuslanCockpit.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanCockpit.xml</path>
 		<offsets>
 			<x-m>0.4</x-m>
 			<y-m>0.0</y-m>
@@ -29,23 +29,23 @@
 
 	<model>
 		<name>An-124 Operations</name>
-		<path>Models/RuslanOperations.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanOperations.xml</path>
 	</model>
 
 	<model>
 		<name>An-124 Lighs</name>
-		<path>Models/RuslanLights.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanLights.xml</path>
 	</model>
 
 
 	<model>
 		<name>An-124 Interior</name>
-		<path>Models/RuslanInterior.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanInterior.xml</path>
 	</model>
 
 	<model>
 		<name>An-124 Operations</name>
-		<path>Models/RuslanCargo.xml</path>
+		<path>Aircraft/JH-Ruslan/Models/RuslanCargo.xml</path>
 	</model>
 
 </PropertyList>
