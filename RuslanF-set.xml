@@ -48,7 +48,7 @@
 		<model>
 
 			<!-- path to model file -->
-			<path>Models/Ruslan-F.xml</path>
+			<path>Aircraft/JH-Ruslan/Models/Ruslan-F.xml</path>
 
 			<livery>
 				<file type="string">Antonov</file>

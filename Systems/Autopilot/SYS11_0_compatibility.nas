@@ -312,7 +312,7 @@ var AP_Toggle = func () {
 		SPD_Sync();
     
 		#then engage HDG or FPA by default if no option pre-selected
-		#### checking for "" instead of nil because old-school programmers like me make sure things are initialized whenever possible
+		#### checking for "" instead of nil because old-school programmers like me make sure things are initialized whenever 			possible
 		if (getprop("autopilot/locks/heading")=="") {
 			setprop("autopilot/locks/heading","dg-heading-hold");      
 		}
